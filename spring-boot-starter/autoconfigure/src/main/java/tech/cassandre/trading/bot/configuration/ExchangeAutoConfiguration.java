@@ -132,7 +132,7 @@ public class ExchangeAutoConfiguration extends BaseConfiguration {
             exchangeSpecification.setApiKey(exchangeParameters.getKey());
             exchangeSpecification.setSecretKey(exchangeParameters.getSecret());
             exchangeSpecification.getResilience().setRateLimiterEnabled(true);
-            exchangeSpecification.setExchangeSpecificParametersItem("Use_Sandbox", exchangeParameters.getModes().getSandbox());
+            exchangeSpecification.setExchangeSpecificParametersItem(Exchange.USE_SANDBOX, exchangeParameters.getModes().getSandbox());
             exchangeSpecification.setExchangeSpecificParametersItem("passphrase", exchangeParameters.getPassphrase());
             exchangeSpecification.setProxyHost(exchangeParameters.getProxyHost());
             exchangeSpecification.setProxyPort(exchangeParameters.getProxyPort());
