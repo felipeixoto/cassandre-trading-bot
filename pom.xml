@@ -181,7 +181,6 @@
 							<goal>sign</goal>
 						</goals>
 						<configuration>
-							<skip>true</skip>
 							<!-- Prevent `gpg` from using pinentry programs -->
 							<gpgArguments>
 								<arg>--pinentry-mode</arg>
