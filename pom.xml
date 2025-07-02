@@ -74,7 +74,7 @@
 
 		<!-- Core -->
 		<spring.version>3.5.3</spring.version>
-		<reactor.version>Dysprosium-SR25</reactor.version>
+		<reactor.version>2024.0.7</reactor.version>
 		<xchange.version>5.2.2</xchange.version>
 		<bucket4j.version>8.0.1</bucket4j.version>
 		<liquibase.version>4.31.1</liquibase.version>
