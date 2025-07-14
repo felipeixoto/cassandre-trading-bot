@@ -186,7 +186,7 @@ public class PositionServiceCassandreImplementation extends BaseService implemen
                 // We can now use those 10 USDT to buy 5 ETH (amount sold / price).
                 Integer baseCurrencyPrecision = position.get().getBaseCurrencyPrecision(); // You can set in DB to avoid LOT_SIZE error, when exchange set a maximum decimal places to a currency.
                 // e.g. in Binance 0.00105 BTC is allowed (5 decimal places), but 0.001059 is not allowed (6 decimal places)
-                final BigDecimal amountToBuy = positionDTO.getAmountToLock().getValue().divide(ticker.getLast(), HALF_UP).setScale(baseCurrencyPrecision, CEILING);
+                final BigDecimal amountToBuy = positionDTO.getAmountToLock().getValue().divide(ticker.getLast(), HALF_UP).setScale(baseCurrencyPrecision, CEILING); // Changed to CEILING
                 orderCreationResult = tradeService.createBuyMarketOrder(strategy, positionDTO.getCurrencyPair(), amountToBuy);
             }
 
